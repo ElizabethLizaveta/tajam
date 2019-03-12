@@ -1,0 +1,161 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    min-width: 320px;
+ 
+    &__logo {
+        width: 134px;
+        height: auto;
+
+        @include media('<tablet') {
+            width: 110px;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        list-style: none;
+        min-width: 320px;
+       
+        @include media('<desktop') {
+            display: none;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: map-get($navbar, 'menu-mob-bg');
+            overflow: hidden;
+            z-index: 1;
+            animation: fadeMenu 1s;
+        }
+
+        &.navbar__nav_opened {
+            display: flex;
+        }
+
+        &-item {
+            position: relative;
+            font-family: map-get($navbar, 'section-font-family');
+            font-weight: 900;
+            font-size: 13px;
+            letter-spacing: 0.025em;
+            margin-left: 25px;
+            text-transform: uppercase;
+
+            @include media('<desktop') {
+                width: 100vw;
+                margin: 0;
+                padding: 20px;
+                font-size: 30px;
+            }
+
+            @include media('<tablet') {
+                padding: 15px;
+                font-size: 25px;
+            }
+
+            &_selected {
+
+                .navbar__link:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    bottom: -5px;
+                    border-bottom: 1px solid #00e0d0;
+                }
+                 
+            }
+        }
+    }
+
+    &__link {
+        position: relative;
+        color: #fff;
+
+        &-field {
+            display: none;
+
+        @include media('<desktop') {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        }
+    }
+
+    &__toggle {
+        display: none;
+
+        @include media('<desktop') {
+            display: block;
+            width: 50px;
+            height: 60px;
+            background: none;
+            border: none;
+            z-index: 2;
+        }
+
+        &-line,
+        &-line::before,
+        &-line::after {
+            display: block;
+            height: 4px;
+            width: 40px;
+            border-radius: 3px;
+            background-color: map-get($navbar,'toggle-color');
+        }
+
+        &-line {
+            position: relative;
+            transition-duration: 0.22s;
+            transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -10px;
+                transition: top 0.1s 0.25s ease-in,
+                opacity 0.1s ease-in;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                transition: bottom 0.1s 0.25s ease-in,
+                transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            }
+        }
+
+        &.navbar__toggle_active {
+            .navbar__toggle-line {
+                transform: rotate(225deg);
+                transition-delay: 0.12s;
+                transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+                &::before {
+                    top: 0;
+                    opacity: 0;
+                    transition: top 0.1s ease-out,
+                    opacity 0.1s 0.12s ease-out;
+                }
+
+                &::after {
+                    bottom: 0;
+                    transform: rotate(-90deg);
+                    transition: bottom 0.1s ease-out,
+                    transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+                }
+            }
+        }
+    }
+}

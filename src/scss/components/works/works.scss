@@ -1,0 +1,70 @@
+.works {
+    font-family: map-get($works, 'section-font-family');
+    font-size: 14px;
+    font-weight: 300;
+    color: map-get($works, 'section-font-color');
+    text-align: center;
+    overflow: hidden;
+
+    &__heading-holder {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 61px;
+
+        @include media('<tablet') {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__link {
+        color: map-get($works, 'section-font-color');
+        position: relative;
+        padding: 0 20px 0 0;
+
+        i {
+            font-size: 20px;
+            position: absolute;
+            top: -2px;
+
+
+        }
+    }
+
+    &__holder {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 67px;
+
+        @include media('<tablet') {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__img-wrap {
+        width: 16.6666666667%;
+
+        @include media('<desktop') {
+            width: 25%;
+        }
+
+        @include media('<tablet') {
+            width: 33.333%;
+        }
+
+        @include media('<phone') {
+            width: 50%;
+        }
+    }
+
+    &__img {
+        display: block;
+    }
+
+    &__button {
+        padding: 10px 27px;
+    }
+
+    &__button_hidden {
+        display: none;
+    }
+}

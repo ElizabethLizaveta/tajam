@@ -1,0 +1,73 @@
+.story {
+    font-family: map-get($story, 'section-font-family');
+    color: map-get($story, 'section-font-color');
+    line-height: 22px;
+    letter-spacing: 0.03em;
+    font-size: 14px;
+    font-weight: 300;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+
+        @include media('<desktop') {
+            flex-direction: column;
+        }
+    }
+
+    &__col_left {
+        width: 40%;
+
+        @include media('<desktop') {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__col_right {
+        width: 57%;
+
+        @include media('<desktop') {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__img-wrap {
+        text-align: center;
+    }
+
+    &__img {
+        width: 236px;
+
+        @include media('<tablet') {
+            width: 180px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+
+    }
+
+    &__text {
+        margin-bottom: 30px;
+        text-align: left;
+    }
+
+    &__text-p {
+        margin-bottom: 20px;
+    }
+
+    &__button {
+        padding: 10px 15px;
+    }
+
+
+    .story__col+.story__col {
+
+        @include media('<desktop') {
+            margin-top: 30px;
+        }
+    }
+}

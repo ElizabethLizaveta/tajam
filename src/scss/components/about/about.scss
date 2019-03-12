@@ -1,0 +1,115 @@
+.about {
+    width: 100%;
+    padding: 228px 0 60px 0;
+    font-family: map-get($about, 'section-font-family');
+    font-weight: 300;
+    color: map-get($about, 'section-font-color');
+    line-height: 24px;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+
+    @include media('<desktop') {
+        padding: 200px 0 60px 0;
+    }
+
+    @include media('<tablet') {
+        padding: 120px 0 40px 0;
+    }
+
+    &_custom-bg {
+        background: 100% 100%/cover no-repeat;
+    }
+
+    &__title {
+        position: relative;
+        font-size: 32px;
+        line-height: inherit;
+        font-weight: 900;
+        font-family: map-get($about, 'title-font-family');
+        margin-bottom: 54px;
+        letter-spacing: 0.01em;
+
+        @include media('<tablet') {
+            font-size: 22px;
+        }
+        
+        &_lined {
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 50px;
+                bottom: -28px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-bottom: 1px solid #00e0d0;
+            }
+        }
+    }
+
+    &__text {
+        margin-bottom: 48px;
+
+        @include media('<tablet') {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__button {
+        padding: 10px 13px;
+        margin-bottom: 150px;
+
+        @include media('<desktop') {
+            margin-bottom: 80px;
+        }
+
+        @include media('<tablet') {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__slider {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__slide-inner {
+        max-width: 770px;
+        padding: 0 15px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .swiper-pagination {
+        bottom: 0;
+
+        &-bullet {
+            width: 10px;
+            height: 10px;
+            background: transparent;
+            border: 1px solid #fff;
+            opacity: 1;
+
+            @include media('<desktop') {
+                width: 8px;
+                height: 8px;
+            }
+
+            &-active {
+                background: #00e0d0;
+                border-color: #1e5a56;
+            }
+        }
+    }
+
+    .swiper-container-horizontal>
+    .swiper-pagination-bullets 
+    .swiper-pagination-bullet {
+        margin: 0 2px;
+    }
+}

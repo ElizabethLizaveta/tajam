@@ -1,0 +1,13 @@
+.page__button {
+    font-family:  'Hammersmith One', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: none;
+    color: #00e0d0;
+    border: 1px solid #00e0d0;
+
+    &:hover,
+    &:focus {
+        background: rgba(#00e0d0,0.1);
+    }
+}

@@ -1,0 +1,77 @@
+.expertise__card {
+    width: 33.33333%;
+    padding: 35px;
+    font-family: map-get($expertise__card, 'card-font-family');
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: map-get($expertise__card, 'card-font-color');
+
+    @include media('<desktop') {
+        width: 50%;
+    }
+
+    @include media('<tablet') {
+        width: 100%;
+        padding: 15px;
+    }
+
+    &-title {
+        font-size: 14px;
+        letter-spacing: 0.075em;
+        margin-bottom: 10px;
+    }
+
+    &-img {
+        margin-bottom: 15px;
+    }
+
+    &_bordered {
+
+        &.expertise__card-1,
+        &.expertise__card-3 {
+            border-bottom: 1px solid map-get($expertise__card, 'card-border-color');
+        }
+
+        &.expertise__card-2 {
+            border-right: 1px solid map-get($expertise__card, 'card-border-color');
+            border-left: 1px solid map-get($expertise__card, 'card-border-color');
+            border-bottom: 1px solid map-get($expertise__card, 'card-border-color');
+
+            @include media('<desktop') {
+                border-right: none;
+            }
+
+            @include media('<tablet') {
+                border-left: none;
+            }
+        }
+
+        &.expertise__card-4 {
+            @include media('<desktop') {
+                border-bottom: 1px solid map-get($expertise__card, 'card-border-color');
+                border-left: 1px solid map-get($expertise__card, 'card-border-color');
+            }
+
+            @include media('<tablet') {
+                border-left: none;
+            }
+        }
+
+        &.expertise__card-5 {
+            border-right: 1px solid map-get($expertise__card, 'card-border-color');
+            border-left: 1px solid map-get($expertise__card, 'card-border-color');
+
+            @include media('<desktop') {
+                border-left: none;
+            }
+
+            @include media('<tablet') {
+                border-right: none;
+                border-bottom: 1px solid map-get($expertise__card, 'card-border-color');
+            }
+        }
+    }
+}

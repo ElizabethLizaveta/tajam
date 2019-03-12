@@ -1,0 +1,97 @@
+.contact {
+    color: map-get($contact, 'section-font-color');
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+
+        @include media('<desktop') {
+            flex-direction: column;
+        }
+    }
+
+    &__news {
+        width: 50%;
+
+        @include media('<desktop') {
+            width: 100%;
+            margin-bottom: 60px;
+        }
+    }
+
+    &__col {
+
+        @include media('<desktop') {
+            width: 100%;
+        }
+    }
+
+    &__client {
+        width: 40%;
+        @include media('<desktop') {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        margin-bottom: 34px;
+    }
+
+    .client__logos-wrap {
+        display: flex;
+        min-height: 420px;
+        justify-content: space-between;
+
+        @include media('<desktop') {
+            flex-direction: column;
+            min-height: 160px;
+
+        }
+
+        @include media('<tablet') {
+            min-height: 120px;
+        }
+
+        @include media('<phone') {
+            flex-direction: row;
+            min-height: 310px;
+          
+        }
+    }
+
+    .client__logos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include media('<desktop') {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        @include media('<phone') {
+            flex-direction: column;
+        }
+    }
+
+    .client__logo {
+        img {
+            @include media('<desktop') {
+                width: 100px;
+            }
+
+            @include media('<tablet') {
+                width: 80px;
+            }
+
+            @include media('<phone') {
+                width: 100px;
+            }
+        }
+    }
+
+    &__button {
+        padding: 10px 30px;
+        margin-top: 12px;
+    }
+}

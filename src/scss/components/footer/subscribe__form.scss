@@ -1,0 +1,32 @@
+.subscribe__form {
+    display: flex;
+    margin-bottom: 27px;
+
+
+    &-element {
+        padding: 16px 15px;
+        color: map-get($subscribe__form, 'form-font-color');
+        border-color: map-get($subscribe__form, 'form-element-border-color');
+
+        @include placeholder {
+            color: map-get($subscribe__form, 'placeholder-font-color');
+        }
+    }
+
+}
+
+.subscribe__button {
+    margin-left: 10px;
+    width: 100px;
+    border: none;
+    background: rgba(#fff, 0.6);
+
+    &:hover,
+    &:focus {
+        background: rgba(#fff, 1);
+    }
+
+    i {
+        font-size: 20px;
+    }
+}

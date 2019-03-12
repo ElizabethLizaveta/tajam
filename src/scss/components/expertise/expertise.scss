@@ -1,0 +1,14 @@
+.expertise {
+    text-align: center;
+    font-size: 14px;
+    color: map-get($expertise, 'section-font-color');
+
+    &__title {
+        margin-bottom: 16px;
+    }
+
+    &__card-holder {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,126 @@
+// Global variables
+//
+// Base font styles for headings and links.
+
+// For headers
+$headings: (
+  'sizes': (
+    'h1-font-size': 32px,
+    'h2-font-size': 22px,
+    'h3-font-size': 16px,
+    'h4-font-size': 15px,
+    'h5-font-size': 14px,
+  ),
+  'fonts': (
+    'headings-font-family': inherit,
+    'headings-color': inherit
+  )
+);
+
+// Global vars for body typography
+$base: (
+  'base-font-sans-serif': unquote("Arial, 'Helvetica Neue', Helvetica, sans-serif"),
+  'base-font-serif': unquote("'Times New Roman', Times, Baskerville, Georgia, serif"),
+  'base-text-color': #000,
+  'base-background-color': #fff,
+  'base-link-color':#39f,
+  'base-link-hover':#00e0d0,
+  'base-font-size': 16px,
+  'base-line-height': 1.2,
+  'base-font-family': unquote("Arial, 'Helvetica Neue', Helvetica, sans-serif"),
+  'base-min-width': 320px
+);
+
+$navbar: (
+'section-font-family': unquote("'Roboto', sans-serif"),
+'section-font-color': #fff,
+'menu-mob-bg':  #3d3064,
+'header-mob-bg': #3d3064,
+'toggle-color': #00e0d0,
+);
+
+$about: (
+  'title-font-family': unquote("'Playfair Display', serif"),
+  'section-font-family': unquote("'Roboto', sans-serif"),
+  'section-font-color': #fff,
+);
+
+$story: (
+'section-font-family': unquote("'Roboto', sans-serif"),
+'section-font-color': #413d4b,
+);
+
+$expertise: (
+  'section-font-color': #413d4b,
+);
+
+$expertise__card: (
+  'card-font-family': unquote("'Roboto', sans-serif"),
+  'card-font-color': #413d4b,
+  'card-border-color': #ebebeb,
+);
+
+$team: (
+  'section-font-family': unquote("'Roboto', sans-serif"),
+  'section-font-color': #fff,
+);
+
+$team__card: (
+  'card-font-family': unquote("'Roboto', sans-serif"),
+  'card-font-color': #fff,
+  'card-border-color': #79778d,
+);
+
+$works: (
+  'section-font-family': unquote("'Roboto', sans-serif"),
+  'section-font-color': #413d4b,
+);
+
+$testimonials: (
+  'section-font-family': unquote("'Playfair Display', serif"),
+  'section-font-color': #fff,
+);
+
+$contact: (
+  'section-font-color': #413d4b,
+);
+
+$contact__form: (
+  'form-font-color':  #413d4b,
+  'placeholder-font-color': #e5e5e5,
+  'form-element-border-color': #e5e5e5,
+);
+
+$subscribe__form: (
+  'form-font-color':  #fff,
+  'placeholder-font-color': #fff,
+  'form-element-border-color': #9891aa,
+);
+
+$page__form: (
+  'form-font-family': unquote("'Roboto', sans-serif"),
+);
+
+$footer: (
+  'section-font-family': unquote("'Roboto', sans-serif"),
+  'section-font-color': #fff,
+);
+
+// Breakpoints for include media mixin
+$breakpoints: (
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 980px,
+  'widescreen': 1200px
+);
+
+// Keywords for include media mixin
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);

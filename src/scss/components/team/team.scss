@@ -1,0 +1,39 @@
+.team {
+    text-align: center;
+    font-family: map-get($story, 'section-font-family');
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: map-get($team, 'section-font-color');
+    background: 100% 100%/cover no-repeat;
+
+    .heading-holder__subtitle_lined {
+        &:after {
+            border-bottom: 1px solid #655c80;
+        }
+    }
+
+    &_custom-bg {
+        background: 100% 100%/cover no-repeat;
+    }
+
+    &__card-holder {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 69px;
+
+        @include media('<tablet') {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 27px;
+    }
+
+    &__button {
+        padding: 13px 15px;
+    }
+}

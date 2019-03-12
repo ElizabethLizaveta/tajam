@@ -1,0 +1,123 @@
+.footer {
+    font-family: map-get($footer, 'section-font-family');
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.025em;
+    color: map-get($footer, 'section-font-color');
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &_top {
+            font-weight: 300;
+            margin-bottom: 55px;
+
+            @include media('<tablet') {
+                margin-bottom: 20px;
+            }
+        }
+
+        &_bottom { 
+            font-weight: 400;
+        }
+    }
+
+    &__col {
+        width: 32%;
+    }
+
+    &__col:nth-child(1),
+    &__col:nth-child(2) {
+        @include media('<desktop') {
+            width: 45%;
+        }
+
+        @include media('<tablet') {
+            width: 100%;
+        }
+    }
+
+    &__col:nth-child(3) {
+        @include media('<desktop') {
+            width: 100%;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 8px;
+    }
+
+    &__title {
+        font-size: 15px;
+        margin: 15px 0 30px;
+
+        @include media('<tablet') {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__address,
+    &__phone {
+        display: flex;
+
+        i {
+            font-size: 20px;
+            margin: 5px 14px 0 0;
+        }
+    }
+
+    &__address {
+        margin-bottom: 15px;
+    }
+
+    &__contact {
+        i {
+            margin-right: 10px;
+            font-size: 15px;
+        }
+    }
+
+    &__social-links {
+        display: flex;
+    }
+
+    &__social-link {
+        margin-right: 8px;
+        font-size: 16px;
+
+        :hover {
+            :before {
+                border: 1px solid #00e0d0;
+            }
+        }
+
+        :before {
+            display: block;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            padding: 8px;
+            text-align: center;
+        }
+
+    }
+
+    &__navigation {
+        display: flex;
+    }
+
+    &__link {
+        color: map-get($footer, 'section-font-color');
+    }
+
+    &__nav {
+        text-transform: uppercase;
+        font-size: 14px;
+        margin-right: 32px;
+
+        @include media('<tablet') {
+            margin-right: 15px;
+        }
+    }
+}

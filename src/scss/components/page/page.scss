@@ -1,0 +1,68 @@
+.page {
+
+    &__section {
+        padding: 68px 0;
+
+        @include media('<tablet') {
+            padding: 40px 0;
+        }
+    }
+
+    &__inner {
+        margin: 0 auto;
+        max-width: 975px;
+        padding: 0 15px;
+    }
+
+
+    &__heading {
+        font-size: 22px;
+        line-height: inherit;
+        letter-spacing: 0.05em;
+        font-weight: 700;
+        font-family: unquote("'Playfair Display', serif");
+        text-transform: uppercase;
+
+        @include media('<tablet') {
+            font-size: 18px;
+        }
+    }
+
+    &__heading-holder {
+
+        .heading-holder__title {
+            margin-bottom: 10px;
+        }
+
+        .heading-holder__subtitle {
+            position: relative;
+            margin-bottom: 60px;
+            font-family: unquote("'Playfair Display', serif");
+            font-size: 14px;
+            letter-spacing: 0.075em;
+
+            @include media('<tablet') {
+                margin-bottom: 50px;
+            }
+
+            &_lined {
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 53px;
+                    bottom: -19px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-bottom: 1px solid #413d4b;
+                }
+            }
+        }
+    }
+
+    &__heading_small {
+        font-weight: 900;
+        font-family: unquote("'Roboto', sans-serif");
+        text-transform: uppercase;
+    }
+}
