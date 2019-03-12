@@ -39,15 +39,6 @@
         &_hide {
             display: none;
         }
-
-        i {
-            font-size: 110px;
-            color: #fff;
-
-            @include media('<tablet') {
-                font-size: 70px;
-            }
-        }
     }
 
     &__media {
