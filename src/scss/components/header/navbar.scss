@@ -5,7 +5,7 @@
     height: 100%;
     width: 100%;
     min-width: 320px;
- 
+
     &__logo {
         width: 134px;
         height: auto;
@@ -19,10 +19,11 @@
         display: flex;
         list-style: none;
         min-width: 320px;
-       
+
         @include media('<desktop') {
             display: none;
             flex-direction: column;
+            justify-content: center;
             width: 100vw;
             height: 100vh;
             position: absolute;
@@ -34,7 +35,7 @@
             animation: fadeMenu 1s;
         }
 
-        &.navbar__nav_opened {
+        &_opened {
             display: flex;
         }
 
@@ -46,11 +47,12 @@
             letter-spacing: 0.025em;
             margin-left: 25px;
             text-transform: uppercase;
+            text-align: center;
 
             @include media('<desktop') {
                 width: 100vw;
-                margin: 0;
                 padding: 20px;
+                margin: 0;
                 font-size: 30px;
             }
 
@@ -59,7 +61,7 @@
                 font-size: 25px;
             }
 
-            &_selected {
+            &_active {
 
                 .navbar__link:after {
                     content: '';
@@ -69,7 +71,7 @@
                     bottom: -5px;
                     border-bottom: 1px solid #00e0d0;
                 }
-                 
+
             }
         }
     }
@@ -81,14 +83,14 @@
         &-field {
             display: none;
 
-        @include media('<desktop') {
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-        }
+            @include media('<desktop') {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
         }
     }
 
@@ -111,7 +113,7 @@
             height: 4px;
             width: 40px;
             border-radius: 3px;
-            background-color: map-get($navbar,'toggle-color');
+            background-color: map-get($navbar, 'toggle-color');
         }
 
         &-line {
@@ -124,7 +126,7 @@
                 position: absolute;
                 top: -10px;
                 transition: top 0.1s 0.25s ease-in,
-                opacity 0.1s ease-in;
+                    opacity 0.1s ease-in;
             }
 
             &::after {
@@ -132,11 +134,11 @@
                 position: absolute;
                 bottom: -10px;
                 transition: bottom 0.1s 0.25s ease-in,
-                transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                    transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
             }
         }
 
-        &.navbar__toggle_active {
+        &_active {
             .navbar__toggle-line {
                 transform: rotate(225deg);
                 transition-delay: 0.12s;
@@ -146,14 +148,14 @@
                     top: 0;
                     opacity: 0;
                     transition: top 0.1s ease-out,
-                    opacity 0.1s 0.12s ease-out;
+                        opacity 0.1s 0.12s ease-out;
                 }
 
                 &::after {
                     bottom: 0;
                     transform: rotate(-90deg);
                     transition: bottom 0.1s ease-out,
-                    transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+                        transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
                 }
             }
         }

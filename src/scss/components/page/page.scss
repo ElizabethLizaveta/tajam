@@ -28,34 +28,32 @@
         }
     }
 
-    &__heading-holder {
 
-        .heading-holder__title {
-            margin-bottom: 10px;
+
+    .heading-holder__title {
+        margin-bottom: 10px;
+    }
+
+    .heading-holder__subtitle {
+        position: relative;
+        margin-bottom: 63px;
+        font-family: unquote("'Playfair Display', serif");
+        font-size: 14px;
+        letter-spacing: 0.075em;
+
+        @include media('<tablet') {
+            margin-bottom: 50px;
         }
 
-        .heading-holder__subtitle {
-            position: relative;
-            margin-bottom: 60px;
-            font-family: unquote("'Playfair Display', serif");
-            font-size: 14px;
-            letter-spacing: 0.075em;
-
-            @include media('<tablet') {
-                margin-bottom: 50px;
-            }
-
-            &_lined {
-                &:after {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    width: 53px;
-                    bottom: -19px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    border-bottom: 1px solid #413d4b;
-                }
+        &_lined {
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 53px;
+                bottom: -19px;
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
     }

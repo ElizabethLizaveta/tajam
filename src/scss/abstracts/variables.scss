@@ -19,15 +19,13 @@ $headings: (
 
 // Global vars for body typography
 $base: (
-  'base-font-sans-serif': unquote("Arial, 'Helvetica Neue', Helvetica, sans-serif"),
-  'base-font-serif': unquote("'Times New Roman', Times, Baskerville, Georgia, serif"),
+  'base-font-family': unquote("'Roboto', sans-serif"),
   'base-text-color': #000,
   'base-background-color': #fff,
-  'base-link-color':#39f,
+  'base-link-color':#413d4b,
   'base-link-hover':#00e0d0,
   'base-font-size': 16px,
   'base-line-height': 1.2,
-  'base-font-family': unquote("Arial, 'Helvetica Neue', Helvetica, sans-serif"),
   'base-min-width': 320px
 );
 

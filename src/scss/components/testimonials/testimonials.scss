@@ -18,7 +18,7 @@
         }
     }
 
-    &__text-holder {
+    &__comment {
         max-width: 880px;
         margin: 30px auto 45px;
         padding: 0 50px;
@@ -29,7 +29,7 @@
     }
 
     &__slider {
-        max-width: 410px;
+        max-width: 800px;
         position: relative;
         margin: 0 auto;
         padding: 0 35px;
@@ -54,16 +54,17 @@
 
     &__info {
         display: none;
-        font-family: unquote("'Roboto', sans-serif");
     }
 
     &__name {
+        font-family: unquote("'Roboto', sans-serif");
         font-size: 14px;
         line-height: 1;
         margin-bottom: 3px;
     }
 
     &__position {
+        font-family: unquote("'Roboto', sans-serif");
         font-size: 13px;
         font-weight: 300;
         text-transform: uppercase;
@@ -71,9 +72,10 @@
 
     .swiper {
         &-container_2 {
-            max-width: 340px;
-            height: 151px;
+            max-width: 800px;
+            height: 400px;
             margin: 0;
+           
         }
 
         &-slide {
@@ -87,6 +89,8 @@
 
             &-active {
 
+                overflow: visible;
+
                 .testimonials__photo {
                     width: 65px;
                     height: 65px;
@@ -94,7 +98,7 @@
 
                 .testimonials__info {
                     display: block;
-                    width: 300px;
+                    width: 880px;
                     position: absolute;
                     top: 0;
                     left: 50%;

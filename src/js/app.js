@@ -4,10 +4,9 @@
 // Feel free with using ES6 here.
 
 import navbarMenu from './modules/navbar';
-import aboutSlider from './modules/about__slider';
+import swiperSlider from './modules/swiper';
 import storyVideo from './modules/story-video';
 import worksLoad from './modules/works';
-import testimonialsSlider from './modules/testimonials__slider';
 import formValid from './modules/contact__form';
 
 (($) => {
@@ -15,9 +14,8 @@ import formValid from './modules/contact__form';
   $(() => {
     navbarMenu.function();
   });
-  aboutSlider.function();
+  swiperSlider.function();
   storyVideo.function();
   worksLoad.function();
-  testimonialsSlider.function();
   formValid.function();
 })(jQuery);

@@ -7,7 +7,7 @@
     color: map-get($team, 'section-font-color');
     background: 100% 100%/cover no-repeat;
 
-    .heading-holder__subtitle_lined {
+    &__subtitle_lined {
         &:after {
             border-bottom: 1px solid #655c80;
         }

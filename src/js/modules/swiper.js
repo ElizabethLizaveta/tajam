@@ -1,7 +1,15 @@
 const Swiper = require('swiper');
 
-const testimonialsSlider = {
+const swiperSlider = {
   function() {
+    const swiper = new Swiper('.about__swiper-container', {
+      navigation: false,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+
     const swiper2 = new Swiper('.swiper-container_2', {
       loop: true,
       slidesPerView: 5,
@@ -20,4 +28,4 @@ const testimonialsSlider = {
   },
 };
 
-export default testimonialsSlider;
+export default swiperSlider;

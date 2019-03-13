@@ -1,6 +1,6 @@
 .expertise__card {
     width: 33.33333%;
-    padding: 35px;
+    padding: 30px;
     font-family: map-get($expertise__card, 'card-font-family');
     font-size: 14px;
     font-weight: 300;
@@ -20,12 +20,12 @@
 
     &-title {
         font-size: 14px;
-        letter-spacing: 0.075em;
-        margin-bottom: 10px;
+        letter-spacing: 0.05em;
+        margin-bottom: 15px;
     }
 
     &-img {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 
     &_bordered {

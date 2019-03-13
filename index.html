@@ -17,11 +17,7 @@
           background-image: url('assets/images/about-bg-small.jpg');
     }
 
-    .story-video__media {
-      background-image: url('assets/images/video-poster-small.jpg');
-    }
-
-    .story-video__overlay {
+    .story-video_custom-bg {
       background-image: url('assets/images/video-poster-small.jpg');
     }
 
@@ -37,42 +33,12 @@
       background: url('assets/images/footer-bg-small.jpg') 100% 100%/cover no-repeat;
     }
 
-    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-      .about_custom-bg {
-        background-image: url('assets/images/about-bg-small@2x.jpg');
-      }
-
-      .story-video__media {
-        background-image: url('assets/images/video-poster-small@2x.jpg');
-      }
-
-      .story-video__overlay {
-        background-image: url('assets/images/video-poster-small@2x.jpg');
-      }
-
-      .team_custom-bg {
-        background-image: url('assets/images/team-bg-small@2x.jpg');
-      }
-
-      .testimonials_custom-bg {
-        background-image: url('assets/images/testimonials-bg-small@2x.jpg');
-      }
-
-      .footer_cutom-bg {
-        background: url('assets/images/footer-bg-small@2x.jpg') 100% 100%/cover no-repeat;
-      }   
-    } 
-
     @media (min-width: 480px){
       .about_custom-bg {
         background-image: url('assets/images/about-bg-medium.jpg');
       }
 
-      .story-video__media {
-        background-image: url('assets/images/video-poster-medium.jpg');
-      }
-
-      .story-video__overlay {
+      .story-video_custom-bg {
         background-image: url('assets/images/video-poster-medium.jpg');
       }
 
@@ -89,42 +55,12 @@
       }   
     }  
 
-    @media (min-width: 480px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 480px) and (min-resolution: 144dpi) {
-      .about_custom-bg {
-        background-image: url('assets/images/about-bg-medium@2x.jpg');
-      }
-
-      .story-video__media {
-        background-image: url('assets/images/video-poster-medium@2x.jpg');
-      }
-
-      .story-video__overlay {
-        background-image: url('assets/images/video-poster-medium@2x.jpg');
-      }
-
-      .team_custom-bg {
-        background-image: url('assets/images/team-bg-medium@2x.jpg');
-      }
-
-      .testimonials_custom-bg {
-        background-image: url('assets/images/testimonials-bg-medium@2x.jpg');
-      }
-
-      .footer_cutom-bg {
-        background: url('assets/images/footer-bg-medium@2x.jpg') 100% 100%/cover no-repeat;
-      }   
-    }
-     
       @media (min-width: 980px){
       .about_custom-bg {
         background-image: url('assets/images/about-bg-extralarge.jpg');
       }
 
-      .story-video__media {
-        background-image: url('assets/images/video-poster-extralarge.jpg');
-      }
-
-      .story-video__overlay {
+      .story-video_custom-bg {
         background-image: url('assets/images/video-poster-extralarge.jpg');
       }
 
@@ -141,32 +77,6 @@
       }
     }  
 
-    @media (min-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 980px) and (min-resolution: 144dpi) {     
-      .about_custom-bg {
-        background-image: url('assets/images/about-bg-extralarge@2x.jpg');
-      }
-
-      .story-video__media {
-        background-image: url('assets/images/video-poster-extralarge@2x.jpg');
-      }
-
-      .story-video__overlay {
-        background-image: url('assets/images/video-poster-extralarge@2x.jpg');
-      }
-
-      .team_custom-bg {
-        background-image: url('assets/images/team-bg-extralarge@2x.jpg');
-      }
-
-      .testimonials_custom-bg {
-        background-image: url('assets/images/testimonials-bg-extralarge@2x.jpg');
-      }
-
-      .footer_cutom-bg {
-        background: url('assets/images/footer-bg-extralarge@2x.jpg')  100% 100%/cover no-repeat;
-      }
-    }
-
    </style>
 
 </head>
@@ -181,7 +91,7 @@
         </a>
       </div>
       <ul class="navbar__nav">
-        <li class="navbar__nav-item"><a class="page__link navbar__link" href="">Home<span class="navbar__link-field"></span></a></li>
+        <li class="navbar__nav-item navbar__nav-item_active"><a class="page__link navbar__link" href="">Home<span class="navbar__link-field"></span></a></li>
         <li class="navbar__nav-item"><a class="page__link navbar__link" href="">About<span class="navbar__link-field"></span></a></li>
         <li class="navbar__nav-item"><a class="page__link navbar__link" href="">Expertise<span class="navbar__link-field"></span></a></li>
         <li class="navbar__nav-item"><a class="page__link navbar__link" href="">Teams<span class="navbar__link-field"></span></a></li>
@@ -278,7 +188,7 @@
         </div>
       </div>
     </section>
-    <section class="story-video">
+    <section class="story-video story-video_custom-bg">
       <div class="story-video__text">
         <button class="story-video__button story-video__button_play" type="button"><svg xmlns="http://www.w3.org/2000/svg"
             x="0px" y="0px" width="100" height="100" viewBox="0 0 192 192" style=" fill:#000000;">
@@ -311,11 +221,11 @@
       <video class="story-video__media" src="assets/video/testvideo.mp4" poster="assets/images/transparent.png">
       </video>
     </section>
-    <section class="page__section expertise">
+    <section class="expertise page__section">
       <div class="page__inner">
         <div class="page__heading-holder">
           <h2 class="page__heading heading-holder__title">Expertise</h2>
-          <div class="heading-holder__subtitle heading-holder__subtitle_lined">Lorem ipsum dolor sit amet proin gravida
+          <div class="heading-holder__subtitle heading-holder__subtitle_lined expertise__subtitle_lined">Lorem ipsum dolor sit amet proin gravida
             nibh vel velit</div>
         </div>
         <div class="expertise__card-holder">
@@ -356,7 +266,7 @@
       <div class="page__inner">
         <div class="page__heading-holder">
           <h2 class="page__heading heading-holder__title">Meet our amazing team</h2>
-          <div class="heading-holder__subtitle heading-holder__subtitle_lined">Lorem ipsum dolor sit amet proin gravida
+          <div class="heading-holder__subtitle heading-holder__subtitle_lined  team__subtitle_lined">Lorem ipsum dolor sit amet proin gravida
             nibh vel velit</div>
         </div>
         <div class="team__card-holder">
@@ -432,24 +342,23 @@
       </div>
       <div class="page__inner">
         <button type="button" class="works__button works__button_load page__button">Load more</button>
-        <button type="button" class="works__button works__button_hide works__button_hidden page__button">Hide</button>
       </div>
     </section>
     <section class="testimonials testimonials_custom-bg page__section">
       <i class="icon-quotes-left"></i>
-      <div class="testimonials__text-holder">
-        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-          Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
-          Duis sed
-          odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio
-          tincidunt
-          auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.</p>
-      </div>
       <div class="testimonials__slider">
         <div class="swiper-container swiper-container_2">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="testimonials__info">
+                  <div class="testimonials__comment">
+                      <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                        Duis sed
+                        odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio
+                        tincidunt
+                        auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.</p>
+                    </div>
                 <h5 class="page__heading_small testimonials__name">Jane Galadriel</h5>
                 <span class="testimonials__position">CEO Tengkurep</span>
               </div>
@@ -459,6 +368,14 @@
             </div>
             <div class="swiper-slide">
               <div class="testimonials__info">
+                  <div class="testimonials__comment">
+                      <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                        Duis sed
+                        odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio
+                        tincidunt
+                        auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.</p>
+                    </div>
                 <h5 class="page__heading_small testimonials__name">Jane Galadriel</h5>
                 <span class="testimonials__position">CEO Tengkurep</span>
               </div>
@@ -468,6 +385,14 @@
             </div>
             <div class="swiper-slide">
               <div class="testimonials__info">
+                  <div class="testimonials__comment">
+                      <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                        Duis sed
+                        odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio
+                        tincidunt
+                        auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.</p>
+                    </div>
                 <h5 class="page__heading_small testimonials__name">Jane Galadriel</h5>
                 <span class="testimonials__position">CEO Tengkurep</span>
               </div>
@@ -477,6 +402,14 @@
             </div>
             <div class="swiper-slide">
               <div class="testimonials__info">
+                  <div class="testimonials__comment">
+                      <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                        Duis sed
+                        odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio
+                        tincidunt
+                        auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.</p>
+                    </div>
                 <h5 class="page__heading_small testimonials__name">Jane Galadriel</h5>
                 <span class="testimonials__position">CEO Tengkurep</span>
               </div>
@@ -486,6 +419,14 @@
             </div>
             <div class="swiper-slide">
               <div class="testimonials__info">
+                  <div class="testimonials__comment">
+                      <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                        Duis sed
+                        odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio
+                        tincidunt
+                        auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.</p>
+                    </div>
                 <h5 class="page__heading_small testimonials__name">Jane Galadriel</h5>
                 <span class="testimonials__position">CEO Tengkurep</span>
               </div>
@@ -541,18 +482,18 @@
           <h2 class="page__heading contact__title">Our happy client</h2>
           <div class="client__logos-wrap">
             <ul class="client__logos">
-              <li class="client__logo"><a href=""><img src="assets/images/zara-logo.png" alt="zara"></a></li>
-              <li class="client__logo"><a href=""><img src="assets/images/barneys-logo.png" alt="zara"></a></li>
-              <li class="client__logo"><a href=""><img src="assets/images/calvin-logo.png" alt="zara"></a></li>
-              <li class="client__logo"><a href=""><img src="assets/images/converse-logo.png" alt="zara"></a></li>
-              <li class="client__logo"><a href=""><img src="assets/images/levis-logo.png" alt="zara"></a></li>
+              <li class="client__logo"><a href=""><img class="client__logo-img" src="assets/images/zara-logo.png" alt="zara"></a></li>
+              <li class="client__logo"><a href=""><img class="client__logo-img" src="assets/images/barneys-logo.png" alt="zara"></a></li>
+              <li class="client__logo"><a href=""><img class="client__logo-img" src="assets/images/calvin-logo.png" alt="zara"></a></li>
+              <li class="client__logo"><a href=""><img class="client__logo-img" src="assets/images/converse-logo.png" alt="zara"></a></li>
+              <li class="client__logo"><a href=""><img class="client__logo-img" src="assets/images/levis-logo.png" alt="zara"></a></li>
             </ul>
             <ul class="client__logos">
-              <li class="client__logo"><a href=""><img src="assets/images/mango-logo.png" alt="zara"></a></li>
-              <li class="client__logo"><a href=""><img src="assets/images/gucci-logo.png" alt="zara"></a></li>
-              <li class="client__logo"><a href=""><img src="assets/images/nike-logo.png" alt="zara"></a></li>
-              <li class="client__logo"><a href=""><img src="assets/images/puma-logo.png" alt="zara"></a></li>
-              <li class="client__logo"><a href=""><img src="assets/images/billabong-logo.png" alt="zara"></a></li>
+              <li class="client__logo"><a href=""><img class="client__logo-img" src="assets/images/mango-logo.png" alt="zara"></a></li>
+              <li class="client__logo"><a href=""><img class="client__logo-img" src="assets/images/gucci-logo.png" alt="zara"></a></li>
+              <li class="client__logo"><a href=""><img class="client__logo-img" src="assets/images/nike-logo.png" alt="zara"></a></li>
+              <li class="client__logo"><a href=""><img class="client__logo-img" src="assets/images/puma-logo.png" alt="zara"></a></li>
+              <li class="client__logo"><a href=""><img class="client__logo-img" src="assets/images/billabong-logo.png" alt="zara"></a></li>
             </ul>
           </div>
         </div>
@@ -588,11 +529,11 @@
           <form action="https://justcoded.us20.list-manage.com/subscribe/post?u=0aaadbbf31a279ef815b868e4&amp;id=840093e319"
             method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate subscribe__form page__form"
             target="_blank" novalidate>
-            <input type="email" value="" name="EMAIL" class="email subscribe__form-element page__form-element" id="mce-EMAIL"
+            <input type="email" value="" name="EMAIL" class="email subscribe__form-input page__form-element" id="mce-EMAIL"
               placeholder="Subscribe our newsletter" required>
             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0aaadbbf31a279ef815b868e4_840093e319"
                 tabindex="-1" value=""></div>
-            <button type="submit" class="clear subscribe__button" id="mc-embedded-subscribe"> <i class="icon-paperplane"></i>
+            <button type="submit" class="clear subscribe__button" id="mc-embedded-subscribe"> <i class="subscribe__button-icon icon-paperplane"></i>
             </button>
           </form>
           <ul class="footer__social-links">
