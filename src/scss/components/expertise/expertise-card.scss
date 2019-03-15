@@ -30,48 +30,51 @@
 
     &_bordered {
 
+        border: solid map-get($expertise__card, 'card-border-color');
+
         &.expertise-card-1,
         &.expertise-card-3 {
-            border-bottom: 1px solid map-get($expertise__card, 'card-border-color');
+            border-width: 0 0 1px;
         }
 
         &.expertise-card-2 {
-            border-right: 1px solid map-get($expertise__card, 'card-border-color');
-            border-left: 1px solid map-get($expertise__card, 'card-border-color');
-            border-bottom: 1px solid map-get($expertise__card, 'card-border-color');
+            border-width: 0 1px 1px;
 
             @include media('<desktop') {
-                border-right: none;
+                border-width: 0 0 1px 1px;
             }
 
             @include media('<tablet') {
-                border-left: none;
+                border-width: 0 0 1px;
             }
         }
 
         &.expertise-card-4 {
+            border-width: 0;
+            
             @include media('<desktop') {
-                border-bottom: 1px solid map-get($expertise__card, 'card-border-color');
-                border-left: 1px solid map-get($expertise__card, 'card-border-color');
+                border-width: 0 0 1px 1px;
             }
 
             @include media('<tablet') {
-                border-left: none;
+                border-width: 0 0 1px;
             }
         }
 
         &.expertise-card-5 {
-            border-right: 1px solid map-get($expertise__card, 'card-border-color');
-            border-left: 1px solid map-get($expertise__card, 'card-border-color');
+            border-width: 0 1px; 
 
             @include media('<desktop') {
-                border-left: none;
+                border-width: 0 1px 0 0;
             }
 
             @include media('<tablet') {
-                border-right: none;
-                border-bottom: 1px solid map-get($expertise__card, 'card-border-color');
+                border-width: 0 0 1px;
             }
+        }
+
+        &.expertise-card-6 {
+            border-width: 0;
         }
     }
 }
