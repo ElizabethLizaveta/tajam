@@ -1,7 +1,6 @@
 .about {
     width: 100%;
     padding: 228px 0 60px 0;
-    font-family: map-get($about, 'section-font-family');
     font-weight: 300;
     color: map-get($about, 'section-font-color');
     line-height: 24px;

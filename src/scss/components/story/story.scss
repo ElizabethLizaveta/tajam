@@ -1,5 +1,4 @@
 .story {
-    font-family: map-get($story, 'section-font-family');
     color: map-get($story, 'section-font-color');
     line-height: 22px;
     letter-spacing: 0.03em;

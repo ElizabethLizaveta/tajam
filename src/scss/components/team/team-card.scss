@@ -2,7 +2,6 @@
     width: 220px;
     padding-bottom: 22px;
     border: 1px solid map-get($team__card, 'card-border-color');
-    font-family: map-get($team__card, 'card-font-family');
     font-size: 13px;
     font-weight: 300;
     color: map-get($team__card, 'card-font-color');

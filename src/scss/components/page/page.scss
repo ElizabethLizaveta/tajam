@@ -1,4 +1,8 @@
 .page {
+    color: map-get($base, 'base-text-color');
+    background: map-get($base, 'base-background-color');
+    font: #{map-get($base, 'base-font-size')}/#{map-get($base, 'base-line-height')} #{map-get($base, 'base-font-family')};
+    min-width: map-get($base, base-min-width);
 
     &__section {
         padding: 68px 0;
@@ -72,7 +76,6 @@
     }
 
     &__form {
-        font-family: map-get($page__form, 'form-font-family');
         font-weight: 300;
         font-size: 14px;
 
