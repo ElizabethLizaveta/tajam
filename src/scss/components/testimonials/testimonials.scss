@@ -10,126 +10,129 @@
         background: 100% 100%/cover no-repeat;
     }
 
-    .icon-quotes-left {
+    &__icon {
+        display: block;
         font-size: 30px;
+        margin-bottom: 32px;
 
         @include media('<tablet') {
             font-size: 20px;
-        }
-    }
-
-    &__comment {
-        max-width: 880px;
-        margin: 30px auto 45px;
-        padding: 0 50px;
-
-        @include media('<tablet') {
-            margin: 24px auto 31px;
+            margin-bottom: 20px;
         }
     }
 
     &__slider {
-        max-width: 800px;
+        max-width: 810px;
         position: relative;
         margin: 0 auto;
-        padding: 0 35px;
+        padding: 0 15px;
+        overflow: hidden;
+    }
+
+    &__gallery-thumbs {
+        max-width: 330px;
+        max-height: 75px;
+        margin: 0 auto;
+
+        @include media('<tablet') {
+            width: 80%;
+        }
+    }
+
+    &__gallery-top {
+        width: 100%;
+
+        margin-bottom: 30px;
+
+        .swiper-slide {
+            width: 100%;
+        }
     }
 
     &__photo-wrap {
-        width: 75px;
-        height: 75px;
+        width: 70px;
+        height: 70px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
     &__photo {
-        width: 44px;
-        height: 44px;
+        width: 45px;
+        height: 45px;
 
         &-rounded {
             border-radius: 50%;
         }
     }
 
-    &__info {
-        display: none;
+    &__comment {
+        margin-bottom: 48px;
+        padding: 0;
+        letter-spacing: 0.025em;
+
+        @include media('<tablet') {
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
     }
 
     &__name {
         font-family: unquote("'Roboto', sans-serif");
         font-size: 14px;
         line-height: 1;
-        margin-bottom: 3px;
+        margin-bottom: 2px;
     }
 
     &__position {
+        display: block;
         font-family: unquote("'Roboto', sans-serif");
         font-size: 13px;
         font-weight: 300;
         text-transform: uppercase;
+        margin-bottom: 10px;
     }
 
-    .swiper {
-        &-container_2 {
-            max-width: 800px;
-            height: 400px;
-            margin: 0;
-           
+    &__swiper-button {
+
+        &:hover,
+        &:focus {
+            outline: none;
         }
 
-        &-slide {
-            position: relative;
-            height: 100%;
+        cursor: pointer;
+    }
 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-end;
+    &__button-next {
+        position: absolute;
+        bottom: 15px;
+        right: 200px;
 
-            &-active {
-
-                overflow: visible;
-
-                .testimonials__photo {
-                    width: 65px;
-                    height: 65px;
-                }
-
-                .testimonials__info {
-                    display: block;
-                    width: 880px;
-                    position: absolute;
-                    top: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    text-align: center;
-                    z-index: 10;
-                    animation: fadeIn ease 3s;
-                }
-            }
+        @include media('<tablet') {
+            right: 15px;
         }
+    }
 
-        &-button {
+    &__button-prev {
+        position: absolute;
+        bottom: 15px;
+        left: 200px;
 
-            &:hover,
-            &:focus {
-                outline: none;
-            }
-
-            cursor: pointer;
+        @include media('<tablet') {
+            left: 15px;
         }
+    }
+}
 
-        &-button-next_2 {
-            position: absolute;
-            bottom: 15px;
-            right: 0;
-        }
+.swiper-slide {
+    display: flex;
+    justify-content: center;
 
-        &-button-prev_2 {
-            position: absolute;
-            bottom: 15px;
-            left: 0;
+    &-active {
+
+        .testimonials__photo {
+            width: 70px;
+            height: 70px;
         }
     }
 }

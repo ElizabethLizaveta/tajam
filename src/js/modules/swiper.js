@@ -2,29 +2,59 @@ const Swiper = require('swiper');
 
 const swiperSlider = {
   function() {
-    const swiper = new Swiper('.about__swiper-container', {
-      navigation: false,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-
-    const swiper2 = new Swiper('.swiper-container_2', {
-      loop: true,
-      slidesPerView: 5,
-      spaceBetween: 10,
-      centeredSlides: true,
-      navigation: {
-        nextEl: '.swiper-button-next_2',
-        prevEl: '.swiper-button-prev_2',
-      },
-      breakpoints: {
-        767: {
-          slidesPerView: 3,
+    function aboutSliderInit() {
+      const swiper = new Swiper('.about__swiper-container', {
+        navigation: false,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
         },
-      },
-    });
+      });
+    }
+    function testimonialsSliderInit() {
+      const galleryThumbs = new Swiper('.testimonials__gallery-thumbs', {
+        spaceBetween: 0,
+        slidesPerView: 5,
+        loop: true,
+        freeMode: true,
+        loopedSlides: 5,
+        centeredSlides: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        navigation: {
+          nextEl: '.testimonials__button-next',
+          prevEl: '.testimonials__button-prev',
+        },
+        breakpoints: {
+          767: {
+            slidesPerView: 3,
+          },
+        },
+      });
+
+      const galleryTop = new Swiper('.testimonials__gallery-top', {
+        spaceBetween: 0,
+        slidesPerView: 1,
+        loop: true,
+        loopedSlides: 5,
+        navigation: {
+          nextEl: '.testimonials__button-next',
+          prevEl: '.testimonials__button-prev',
+        },
+        thumbs: {
+          swiper: galleryThumbs,
+        },
+      });
+    }
+
+    function sliderInit() {
+      aboutSliderInit();
+      testimonialsSliderInit();
+    }
+
+    return {
+      publicMethod: sliderInit(),
+    };
   },
 };
 

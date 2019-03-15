@@ -1,6 +1,4 @@
 @import 'page/page';
-@import 'page/page__form';
-@import 'page/page__button';
 @import 'header/header';
 @import 'header/navbar';
 @import 'about/about';
@@ -8,12 +6,12 @@
 @import 'story/story-video';
 @import 'animation/animation';
 @import 'expertise/expertise';
-@import 'expertise/expertise__card';
+@import 'expertise/expertise-card';
 @import 'team/team';
-@import 'team/team__card'; 
+@import 'team/team-card'; 
 @import 'works/works';
 @import 'testimonials/testimonials';
 @import 'contact/contact';
-@import 'contact/contact__form';
-@import 'footer/subscribe__form';
+@import 'contact/contact-form';
+@import 'footer/subscribe-form';
 @import 'footer/footer';

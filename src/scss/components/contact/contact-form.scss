@@ -1,7 +1,7 @@
-.contact__form {
+.contact-form {
     margin-top: -12px;
 
-    &-element {
+    &__element {
         margin: 12px 0;
         padding: 17px 21px;
         color: map-get($contact__form, 'form-font-color');
@@ -11,8 +11,13 @@
             color: map-get($contact__form, 'placeholder-font-color');
         }
     }
-}
 
-.contact__message {
-    min-height: 180px;
+    &__message {
+        min-height: 180px;
+    }
+
+    &__button {
+        padding: 10px 30px;
+        margin-top: 12px;
+    }
 }

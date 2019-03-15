@@ -37,12 +37,6 @@
     &__title {
         margin-bottom: 34px;
     }
-
-
-    &__button {
-        padding: 10px 30px;
-        margin-top: 12px;
-    }
 }
 
 .client__logos-wrap {
@@ -53,7 +47,6 @@
     @include media('<desktop') {
         flex-direction: column;
         min-height: 160px;
-
     }
 
     @include media('<tablet') {

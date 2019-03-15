@@ -14,7 +14,6 @@
         padding: 0 15px;
     }
 
-
     &__heading {
         font-size: 22px;
         line-height: inherit;
@@ -28,13 +27,7 @@
         }
     }
 
-
-
-    .heading-holder__title {
-        margin-bottom: 10px;
-    }
-
-    .heading-holder__subtitle {
+    &__subtitle {
         position: relative;
         margin-bottom: 63px;
         font-family: unquote("'Playfair Display', serif");
@@ -63,4 +56,35 @@
         font-family: unquote("'Roboto', sans-serif");
         text-transform: uppercase;
     }
+
+    &__button {
+        font-family: 'Hammersmith One', sans-serif;
+        font-size: 16px;
+        text-transform: uppercase;
+        background: none;
+        color: #00e0d0;
+        border: 1px solid #00e0d0;
+
+        &:hover,
+        &:focus {
+            background: rgba(#00e0d0, 0.1);
+        }
+    }
+
+    &__form {
+        font-family: map-get($page__form, 'form-font-family');
+        font-weight: 300;
+        font-size: 14px;
+
+        &-element {
+            height: 45px;
+            width: 100%;
+            border: 1px solid;
+            background: none;
+        }
+    }
+}
+
+.error {
+    color: red;
 }

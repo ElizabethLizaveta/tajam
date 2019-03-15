@@ -8131,68 +8131,39 @@ var _navbar = require('./modules/navbar');
 
 var _navbar2 = _interopRequireDefault(_navbar);
 
-var _about__slider = require('./modules/about__slider');
+var _swiper = require('./modules/swiper');
 
-var _about__slider2 = _interopRequireDefault(_about__slider);
+var _swiper2 = _interopRequireDefault(_swiper);
 
-var _storyVideo = require('./modules/story-video');
+var _video = require('./modules/video');
 
-var _storyVideo2 = _interopRequireDefault(_storyVideo);
+var _video2 = _interopRequireDefault(_video);
 
-var _works = require('./modules/works');
+var _gallery = require('./modules/gallery');
 
-var _works2 = _interopRequireDefault(_works);
+var _gallery2 = _interopRequireDefault(_gallery);
 
-var _testimonials__slider = require('./modules/testimonials__slider');
+var _form = require('./modules/form');
 
-var _testimonials__slider2 = _interopRequireDefault(_testimonials__slider);
-
-var _contact__form = require('./modules/contact__form');
-
-var _contact__form2 = _interopRequireDefault(_contact__form);
+var _form2 = _interopRequireDefault(_form);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// You can write a call and import your functions in this file.
-//
-// This file will be compiled into app.js and will not be minified.
-// Feel free with using ES6 here.
 
 (function ($) {
   // When DOM is ready
   $(function () {
     _navbar2.default.function();
   });
-  _about__slider2.default.function();
-  _storyVideo2.default.function();
-  _works2.default.function();
-  _testimonials__slider2.default.function();
-  _contact__form2.default.function();
-})(jQuery);
+  _swiper2.default.function();
+  _video2.default.function();
+  _gallery2.default.function();
+  _form2.default.function();
+})(jQuery); // You can write a call and import your functions in this file.
+//
+// This file will be compiled into app.js and will not be minified.
+// Feel free with using ES6 here.
 
-},{"./modules/about__slider":3,"./modules/contact__form":4,"./modules/navbar":5,"./modules/story-video":6,"./modules/testimonials__slider":7,"./modules/works":8}],3:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var Swiper = require('swiper');
-
-var aboutSlider = {
-  function: function _function() {
-    var swiper = new Swiper('.about__swiper-container', {
-      navigation: false,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      }
-    });
-  }
-};
-
-exports.default = aboutSlider;
-
-},{"swiper":1}],4:[function(require,module,exports){
+},{"./modules/form":3,"./modules/gallery":4,"./modules/navbar":5,"./modules/swiper":6,"./modules/video":7}],3:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8200,28 +8171,71 @@ Object.defineProperty(exports, "__esModule", {
 });
 var formValid = {
   function: function _function() {
-    var contactForm = $('.contact__form');
-    contactForm.validate({
-      rules: {
-        name: 'required',
-        message: 'required',
-        email: {
-          required: true,
-          email: true
+    function formValidate() {
+      var contactForm = $('.contact-form');
+      contactForm.validate({
+        rules: {
+          name: 'required',
+          message: 'required',
+          email: {
+            required: true,
+            email: true
+          }
+        },
+        messages: {
+          name: 'Please enter your name',
+          email: 'Please enter a valid email address'
+        },
+        submitHandler: function submitHandler(form) {
+          form.submit();
         }
-      },
-      messages: {
-        name: 'Please enter your name',
-        email: 'Please enter a valid email address'
-      },
-      submitHandler: function submitHandler(form) {
-        form.submit();
-      }
-    });
+      });
+    }
+
+    return {
+      publicMethod: formValidate()
+    };
   }
 };
 
 exports.default = formValid;
+
+},{}],4:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var worksLoad = {
+  function: function _function() {
+    var loadBtn = $('.works__button_load');
+
+    function ajaxLoad(fileUrl) {
+      $.ajax({
+        url: fileUrl,
+        context: document.body
+      }).done(function (obj) {
+        $.each(obj, function (key, val) {
+          $('.works__holder').append('<div class="works__img-wrap works__img_more"><img class="works__img" src="' + val.link + '"></div>');
+        });
+      });
+    }
+
+    function galleryLoad() {
+      loadBtn.click(function () {
+        ajaxLoad('portfolio.json');
+        ajaxLoad('portfolio2.json');
+        loadBtn.toggleClass('works__button_hidden');
+      });
+    }
+
+    return {
+      publicMethod: galleryLoad()
+    };
+  }
+};
+
+exports.default = worksLoad;
 
 },{}],5:[function(require,module,exports){
 'use strict';
@@ -8242,10 +8256,16 @@ var navbarMenu = {
       navbarNav.toggleClass('navbar__nav_opened');
     }
 
-    navbarToggle.click(function () {
-      toggleAnimate();
-      navbarShow();
-    });
+    function navbarMain() {
+      navbarToggle.click(function () {
+        toggleAnimate();
+        navbarShow();
+      });
+    }
+
+    return {
+      publicMethod: navbarMain()
+    };
   }
 };
 
@@ -8257,12 +8277,79 @@ exports.default = navbarMenu;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+var Swiper = require('swiper');
+
+var swiperSlider = {
+  function: function _function() {
+    function aboutSliderInit() {
+      var swiper = new Swiper('.about__swiper-container', {
+        navigation: false,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        }
+      });
+    }
+    function testimonialsSliderInit() {
+      var galleryThumbs = new Swiper('.testimonials__gallery-thumbs', {
+        spaceBetween: 0,
+        slidesPerView: 5,
+        loop: true,
+        freeMode: true,
+        loopedSlides: 5,
+        centeredSlides: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        navigation: {
+          nextEl: '.testimonials__button-next',
+          prevEl: '.testimonials__button-prev'
+        },
+        breakpoints: {
+          767: {
+            slidesPerView: 3
+          }
+        }
+      });
+
+      var galleryTop = new Swiper('.testimonials__gallery-top', {
+        spaceBetween: 0,
+        slidesPerView: 1,
+        loop: true,
+        loopedSlides: 5,
+        navigation: {
+          nextEl: '.testimonials__button-next',
+          prevEl: '.testimonials__button-prev'
+        },
+        thumbs: {
+          swiper: galleryThumbs
+        }
+      });
+    }
+
+    function sliderInit() {
+      aboutSliderInit();
+      testimonialsSliderInit();
+    }
+
+    return {
+      publicMethod: sliderInit()
+    };
+  }
+};
+
+exports.default = swiperSlider;
+
+},{"swiper":1}],7:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 var storyVideo = {
   function: function _function() {
     var playBtn = $('.story-video__button_play');
     var stopBtn = $('.story-video__button_stop');
     var video = $('.story-video__media').get(0);
-    var storySection = $('.story-video');
 
     function videoPlay() {
       playBtn.click(function () {
@@ -8270,7 +8357,6 @@ var storyVideo = {
         stopBtn.toggleClass('story-video__button_hide');
         video.play();
         video.style.opacity = 1;
-        storySection.removeClass('story-video__overlay');
       });
     }
 
@@ -8280,7 +8366,6 @@ var storyVideo = {
         playBtn.toggleClass('story-video__button_hide');
         video.pause();
         video.style.opacity = 0;
-        storySection.addClass('story-video__overlay');
       });
     }
 
@@ -8289,89 +8374,12 @@ var storyVideo = {
       videoStop();
     }
 
-    videoSwitcher();
+    return {
+      publicMethod: videoSwitcher()
+    };
   }
 };
 
 exports.default = storyVideo;
-
-},{}],7:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var Swiper = require('swiper');
-
-var testimonialsSlider = {
-  function: function _function() {
-    var swiper2 = new Swiper('.swiper-container_2', {
-      loop: true,
-      slidesPerView: 5,
-      spaceBetween: 10,
-      centeredSlides: true,
-      navigation: {
-        nextEl: '.swiper-button-next_2',
-        prevEl: '.swiper-button-prev_2'
-      },
-      breakpoints: {
-        767: {
-          slidesPerView: 3
-        }
-      }
-    });
-  }
-};
-
-exports.default = testimonialsSlider;
-
-},{"swiper":1}],8:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var worksLoad = {
-  function: function _function() {
-    var loadBtn = $('.works__button_load');
-    var hideBtn = $('.works__button_hide');
-
-    loadBtn.click(function () {
-      $.getJSON('portfolio.json', function (obj1) {
-        $.getJSON('portfolio2.json', function (obj2) {
-          $.each(obj1, function (key, val) {
-            $('.works__holder').append('<div class="works__img-wrap works__img_more"><img class="works__img" src="' + val.link + '"></div>');
-          });
-          $.each(obj2, function (key, val) {
-            $('.works__holder').append('<div class="works__img-wrap works__img_more"><img class="works__img" src="' + val.link + '"></div>');
-          });
-        });
-      });
-      /* $.when(
-        $.getJSON('portfolio.json'),
-        $.getJSON('portfolio2.json'),
-      ).done((obj1, obj2) => {
-        $.each(obj1, (key, val) => {
-          $('.works__holder').append(`<div class="works__img-wrap works__img_more">
-          <img class="works__img" src="${val.link}"></div>`);
-        });
-        $.each(obj2, (key, val) => {
-          $('.works__holder').append(`<div class="works__img-wrap works__img_more">
-          <img class="works__img" src="${val.link}"></div>`);
-        });
-      }); */
-      loadBtn.toggleClass('works__button_hidden');
-      hideBtn.toggleClass('works__button_hidden');
-    });
-
-    hideBtn.click(function () {
-      $('.works__img_more').hide();
-      loadBtn.toggleClass('works__button_hidden');
-      hideBtn.toggleClass('works__button_hidden');
-    });
-  }
-};
-
-exports.default = worksLoad;
 
 },{}]},{},[2]);

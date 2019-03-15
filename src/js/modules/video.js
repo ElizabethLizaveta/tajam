@@ -27,7 +27,9 @@ const storyVideo = {
       videoStop();
     }
 
-    videoSwitcher();
+    return {
+      publicMethod: videoSwitcher(),
+    };
   },
 };
 

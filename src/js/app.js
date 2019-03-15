@@ -5,9 +5,9 @@
 
 import navbarMenu from './modules/navbar';
 import swiperSlider from './modules/swiper';
-import storyVideo from './modules/story-video';
-import worksLoad from './modules/works';
-import formValid from './modules/contact__form';
+import storyVideo from './modules/video';
+import worksLoad from './modules/gallery';
+import formValid from './modules/form';
 
 (($) => {
   // When DOM is ready

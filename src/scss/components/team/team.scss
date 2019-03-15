@@ -7,6 +7,10 @@
     color: map-get($team, 'section-font-color');
     background: 100% 100%/cover no-repeat;
 
+    &__title {
+        margin-bottom: 16px;
+    }
+
     &__subtitle_lined {
         &:after {
             border-bottom: 1px solid #655c80;
@@ -20,12 +24,21 @@
     &__card-holder {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         margin-bottom: 69px;
 
         @include media('<tablet') {
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__col {
+        width: 23%;
+        display: flex;
+        justify-content: center;
+
+        @include media('<tablet') {
+            width: 48%;
         }
     }
 

@@ -11,10 +11,16 @@ const navbarMenu = {
       navbarNav.toggleClass('navbar__nav_opened');
     }
 
-    navbarToggle.click(() => {
-      toggleAnimate();
-      navbarShow();
-    });
+    function navbarMain() {
+      navbarToggle.click(() => {
+        toggleAnimate();
+        navbarShow();
+      });
+    }
+
+    return {
+      publicMethod: navbarMain(),
+    };
   },
 };
 

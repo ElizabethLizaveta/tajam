@@ -1,9 +1,9 @@
-.subscribe__form {
+.subscribe-form {
     display: flex;
     margin-bottom: 27px;
 
 
-    &-input {
+    &__input {
         padding: 16px 15px;
         color: map-get($subscribe__form, 'form-font-color');
         border-color: map-get($subscribe__form, 'form-element-border-color');
@@ -13,20 +13,20 @@
         }
     }
 
-}
+    &__button {
+        margin-left: 10px;
+        width: 100px;
+        border: none;
+        background: rgba(#fff, 0.6);
 
-.subscribe__button {
-    margin-left: 10px;
-    width: 100px;
-    border: none;
-    background: rgba(#fff, 0.6);
+        &:hover,
+        &:focus {
+            background: rgba(#fff, 1);
+        }
 
-    &:hover,
-    &:focus {
-        background: rgba(#fff, 1);
+        &_icon {
+            font-size: 20px;
+        }
     }
 
-    &_icon {
-        font-size: 20px;
-    }
 }

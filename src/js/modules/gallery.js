@@ -2,7 +2,7 @@ const worksLoad = {
   function() {
     const loadBtn = $('.works__button_load');
 
-    function galleryLoad(fileUrl) {
+    function ajaxLoad(fileUrl) {
       $.ajax({
         url: fileUrl,
         context: document.body,
@@ -13,11 +13,17 @@ const worksLoad = {
       });
     }
 
-    loadBtn.click(() => {
-      galleryLoad('portfolio.json');
-      galleryLoad('portfolio2.json');
-      loadBtn.toggleClass('works__button_hidden');
-    });
+    function galleryLoad() {
+      loadBtn.click(() => {
+        ajaxLoad('portfolio.json');
+        ajaxLoad('portfolio2.json');
+        loadBtn.toggleClass('works__button_hidden');
+      });
+    }
+
+    return {
+      publicMethod: galleryLoad(),
+    };
   },
 };
 

@@ -27,11 +27,6 @@
         background: none;
         border: none;
 
-        @include media('<tablet') {
-            width: 80px;
-            height: 80px;
-        }
-
         &:hover,
         &:focus {
             opacity: 0.6;
@@ -39,6 +34,16 @@
 
         &_hide {
             display: none;
+        }
+    }
+
+    &__svg {
+        width: 100px;
+        height: auto;
+
+        @include media('<tablet') {
+            width: 80px;
+            height: auto;
         }
     }
 

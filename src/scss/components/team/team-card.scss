@@ -1,0 +1,28 @@
+.team-card {
+    width: 220px;
+    padding-bottom: 22px;
+    border: 1px solid map-get($team__card, 'card-border-color');
+    font-family: map-get($team__card, 'card-font-family');
+    font-size: 13px;
+    font-weight: 300;
+    color: map-get($team__card, 'card-font-color');
+
+    @include media('<tablet') {
+        margin-bottom: 20px;
+    }
+
+    &__img {
+        margin-bottom: 15px;
+    }
+
+    &__name {
+        margin-bottom: 10px;
+    }
+
+    &__position {
+        display: block;
+        text-transform: uppercase;
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+}

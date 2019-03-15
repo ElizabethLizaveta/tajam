@@ -1,4 +1,4 @@
-.expertise__card {
+.expertise-card {
     width: 33.33333%;
     padding: 30px;
     font-family: map-get($expertise__card, 'card-font-family');
@@ -18,24 +18,24 @@
         padding: 15px;
     }
 
-    &-title {
+    &__title {
         font-size: 14px;
         letter-spacing: 0.05em;
         margin-bottom: 15px;
     }
 
-    &-img {
+    &__img {
         margin-bottom: 20px;
     }
 
     &_bordered {
 
-        &.expertise__card-1,
-        &.expertise__card-3 {
+        &.expertise-card-1,
+        &.expertise-card-3 {
             border-bottom: 1px solid map-get($expertise__card, 'card-border-color');
         }
 
-        &.expertise__card-2 {
+        &.expertise-card-2 {
             border-right: 1px solid map-get($expertise__card, 'card-border-color');
             border-left: 1px solid map-get($expertise__card, 'card-border-color');
             border-bottom: 1px solid map-get($expertise__card, 'card-border-color');
@@ -49,7 +49,7 @@
             }
         }
 
-        &.expertise__card-4 {
+        &.expertise-card-4 {
             @include media('<desktop') {
                 border-bottom: 1px solid map-get($expertise__card, 'card-border-color');
                 border-left: 1px solid map-get($expertise__card, 'card-border-color');
@@ -60,7 +60,7 @@
             }
         }
 
-        &.expertise__card-5 {
+        &.expertise-card-5 {
             border-right: 1px solid map-get($expertise__card, 'card-border-color');
             border-left: 1px solid map-get($expertise__card, 'card-border-color');
 
