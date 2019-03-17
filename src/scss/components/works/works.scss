@@ -1,6 +1,7 @@
 .works {
     font-size: 14px;
     font-weight: 300;
+    letter-spacing: 0.05em;
     color: map-get($works, 'section-font-color');
     text-align: center;
     overflow: hidden;
@@ -8,7 +9,7 @@
     &__heading-holder {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 61px;
+        margin-bottom: 55px;
 
         @include media('<phone') {
             flex-direction: column;
@@ -26,15 +27,13 @@
             font-size: 20px;
             position: absolute;
             top: -2px;
-
-
         }
     }
 
     &__holder {
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 67px;
+        margin-bottom: 70px;
 
         @include media('<tablet') {
             margin-bottom: 40px;

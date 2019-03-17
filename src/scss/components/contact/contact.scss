@@ -11,7 +11,7 @@
     }
 
     &__news {
-        width: 50%;
+        width: 49%;
 
         @include media('<desktop') {
             width: 100%;
@@ -35,13 +35,13 @@
     }
 
     &__title {
-        margin-bottom: 34px;
+        margin-bottom: 30px;
     }
 }
 
 .client__logos-wrap {
     display: flex;
-    min-height: 420px;
+    min-height: 430px;
     justify-content: space-between;
 
     @include media('<desktop') {

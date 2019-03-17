@@ -11,7 +11,7 @@
 
         &_top {
             font-weight: 300;
-            margin-bottom: 55px;
+            margin-bottom: 50px;
 
             @include media('<tablet') {
                 margin-bottom: 20px;
@@ -39,8 +39,11 @@
     }
 
     &__col:nth-child(3) {
+        padding-left:  10px;
+
         @include media('<desktop') {
             width: 100%;
+            padding-left:  0;
         }
     }
 
@@ -68,7 +71,7 @@
     }
 
     &__address {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     &__contact {

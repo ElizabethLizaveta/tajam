@@ -2,7 +2,7 @@
     text-align: center;
     font-size: 14px;
     color: map-get($expertise, 'section-font-color');
-    padding-bottom: 50px;
+    padding: 53px 0 70px;
 
     &__subtitle_lined {
         &:after {
@@ -11,7 +11,7 @@
     }
 
     &__title {
-        margin-bottom: 16px;
+        margin-bottom: 10px;
     }
 
     &__card-holder {

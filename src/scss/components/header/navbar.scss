@@ -45,7 +45,7 @@
             font-weight: 900;
             font-size: 13px;
             letter-spacing: 0.025em;
-            margin-left: 25px;
+            margin-left: 24px;
             text-transform: uppercase;
             text-align: center;
 
@@ -71,7 +71,7 @@
                     bottom: -5px;
                     border-bottom: 1px solid #00e0d0;
 
-                    @include media('<tablet') {
+                    @include media('<desktop') {
                         width: 200px;
                         left: 50%;
                         bottom: 2px;

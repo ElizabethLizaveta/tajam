@@ -17,10 +17,12 @@ const swiperSlider = {
         slidesPerView: 5,
         loop: true,
         freeMode: true,
-        loopedSlides: 5,
+        loopedSlides: 4,
         centeredSlides: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
+        touchRatio: 0.2,
+        slideToClickedSlide: true,
         navigation: {
           nextEl: '.testimonials__button-next',
           prevEl: '.testimonials__button-prev',
@@ -34,17 +36,14 @@ const swiperSlider = {
 
       const galleryTop = new Swiper('.testimonials__gallery-top', {
         spaceBetween: 0,
-        slidesPerView: 1,
         loop: true,
-        loopedSlides: 5,
-        navigation: {
-          nextEl: '.testimonials__button-next',
-          prevEl: '.testimonials__button-prev',
-        },
-        thumbs: {
-          swiper: galleryThumbs,
-        },
+        loopedSlides: 4,
+        touchRatio: 0.2,
+        slideToClickedSlide: true,
       });
+
+      galleryTop.controller.control = galleryThumbs;
+      galleryThumbs.controller.control = galleryTop;
     }
 
     function sliderInit() {
